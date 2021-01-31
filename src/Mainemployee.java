@@ -1,7 +1,6 @@
 public class Mainemployee{
     public static void main(String[]args){
 
-
  Specialist specialist1 = new Specialist();
         specialist1.setFio("Kan Alexsey");
         specialist1.setAge(35);
@@ -76,7 +75,7 @@ CEO ceo = new CEO ();
     ceo.setHasStocks(true);
     ceo.goPublic();
     ceo. print();
-
+    ceo.fraze();
 
 }
 

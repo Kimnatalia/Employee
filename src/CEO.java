@@ -29,6 +29,10 @@ public class CEO extends Manager{
                 + "Salary: " + this.salary
                 + "Stok is:   " + this.hasStocks + "."
                 + "Has company car: " +this.hasCompanyCar + "." );
-    }
 
+      }
+
+    public void fraze() {
+        System.out.println("In a sense, Java's success is the worst thing that ever happened to me. ");
+    }
 }
