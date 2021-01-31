@@ -29,6 +29,10 @@ public class CEO extends Manager{
                 + "Salary: " + this.salary
                 + "Stok is:   " + this.hasStocks + "."
                 + "Has company car: " +this.hasCompanyCar + "." );
-    }
 
+      }
+
+    public void fraze() {
+        System.out.println("Intelligence is the ability to avoid getting work done, but in a way that gets it done. ");
+    }
 }
