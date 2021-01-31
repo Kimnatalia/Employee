@@ -33,6 +33,6 @@ public class CEO extends Manager{
       }
 
     public void fraze() {
-        System.out.println("In a sense, Java's success is the worst thing that ever happened to me. ");
+        System.out.println("Intelligence is the ability to avoid getting work done, but in a way that gets it done. ");
     }
 }
