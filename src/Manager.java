@@ -1,7 +1,7 @@
 public class Manager extends Employee {
     boolean hasStocks;
 
-    public Manager (){
+    public Manager() {
 
     }
 
@@ -21,15 +21,20 @@ public class Manager extends Employee {
     public void setHasStocks(boolean hasStocks) {
         this.hasStocks = hasStocks;
     }
-    public void print(){
+
+    public void print() {
         System.out.println("FIO:   " + this.fio + "."
                 + "Age: " + this.age + "."
                 + "Salary: " + this.salary + "."
                 + "Stok is:   " + this.hasStocks + ".");
     }
 
-    public void  writeProcedures() {
+    public void writeProcedures() {
         System.out.println("Writing procedure");
     }
-}
 
+
+    public void goToVacation() {
+        System.out.println("I am going to Egipt!");
+    }
+}

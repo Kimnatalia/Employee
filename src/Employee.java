@@ -1,6 +1,8 @@
 import java.net.SocketTimeoutException;
+import java.sql.SQLOutput;
 
 public class Employee {
+
 
     String fio;
     int age;
@@ -44,6 +46,11 @@ public class Employee {
         System.out.println("FIO:   " + this.fio + "."
                 + "Age: " + this.age + "."
                 + "Salary: " + this.salary + "." );
+    }
+
+   public void goToVacation(){
+       System.out.println( "I am going to vacation");
+
     }
 
 }

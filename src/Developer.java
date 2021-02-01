@@ -35,5 +35,7 @@ public class Developer extends Employee{
         System.out.println("I am working");
     }
 
-
+    public void goToVacation() {
+        System.out.println("I am going to bootcamp!");
+    }
 }

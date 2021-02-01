@@ -11,7 +11,7 @@ public class Specialist extends Employee {
       this.levels = levels;
    }
 
-   public Specialist(){
+   public Specialist() {
 
    }
 
@@ -23,15 +23,19 @@ public class Specialist extends Employee {
       this.levels = levels;
    }
 
-   public void print(){
+   public void print() {
       System.out.println("FIO:   " + this.fio + "."
               + "Age: " + this.age + "."
               + "Salary: " + this.salary
               + "Level is:   " + this.levels + ".");
    }
 
-   public void  workWithClients() {
+   public void workWithClients() {
       System.out.println("What can i help you");
    }
 
+
+   public void goToVacation() {
+      System.out.println("I am going to lake!");
+   }
 }

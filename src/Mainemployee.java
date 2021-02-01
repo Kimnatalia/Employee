@@ -66,8 +66,7 @@ Manager manager2 = new Manager ();
         manager2.setHasStocks(true);
         manager2.writeProcedures();
         manager2. print();
-
-
+ 
 CEO ceo = new CEO ();
     ceo.setFio("Cooronbaev Altynbek");
     ceo.setAge(55);
@@ -75,7 +74,24 @@ CEO ceo = new CEO ();
     ceo.setHasStocks(true);
     ceo.goPublic();
     ceo. print();
-    ceo.fraze();
+
+
+    Employee[] employees = new Employee[10];
+
+    employees[0] = specialist1;
+    employees[1] = specialist2;
+    employees[2] = specialist3;
+    employees[3] = developer1;
+    employees[4] = developer2;
+    employees[5] = developer3;
+    employees[6] = developer4;
+    employees[7] = manager1;
+    employees[8] = manager2;
+    employees[9] = ceo;
+
+   for (Employee i : employees){
+       i.goToVacation();
+   }
 
 }
 

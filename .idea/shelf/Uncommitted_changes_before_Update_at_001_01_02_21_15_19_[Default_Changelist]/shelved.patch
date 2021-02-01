@@ -1,0 +1,200 @@
+Index: src/Mainemployee.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>public class Mainemployee{\r\n    public static void main(String[]args){\r\n\r\n\r\n Specialist specialist1 = new Specialist();\r\n        specialist1.setFio(\"Kan Alexsey\");\r\n        specialist1.setAge(35);\r\n        specialist1.setSalary(5000);\r\n        specialist1.setLevels(1);\r\n        specialist1.workWithClients();\r\n        specialist1. print();\r\nSpecialist specialist2 = new Specialist();\r\n        specialist2.setFio(\"Stvokov Sergey Ivanovich\");\r\n        specialist2.setAge(22);\r\n        specialist2.setSalary(10000);\r\n        specialist2.setLevels(2);\r\n        specialist2.workWithClients();\r\n        specialist2. print();\r\nSpecialist specialist3 = new Specialist();\r\n        specialist3.setFio(\"Tolgonay kyzy Cooronbay\");\r\n        specialist3.setAge(25);\r\n        specialist3.setSalary(5000);\r\n        specialist3.setLevels(3);\r\n        specialist3.workWithClients();\r\n        specialist3. print();\r\nDeveloper developer1 = new Developer();\r\n        developer1.setFio(\"Sorokin Gleb\");\r\n        developer1.setAge(35);\r\n        developer1.setSalary(5000);\r\n        developer1.setGrades(\"Middle\");\r\n        developer1.writeCode();\r\n        developer1. print();\r\nDeveloper developer2 = new Developer();\r\n        developer2.setFio(\"Smit Samanta\");\r\n        developer2.setAge(30);\r\n        developer2.setSalary(5000);\r\n        developer2.setGrades(\"Middle\");\r\n        developer2.writeCode();\r\n        developer2. print();\r\nDeveloper developer3 = new Developer();\r\n        developer3.setFio(\"Anastacya Barsovna\");\r\n        developer3.setAge(31);\r\n        developer3.setSalary(5000);\r\n        developer3.setGrades(\"Middle\");\r\n        developer3.writeCode();\r\n        developer3. print();\r\nDeveloper developer4 = new Developer();\r\n        developer4.setFio(\"Pushkova Larisa Viktorovna\");\r\n        developer4.setAge(28);\r\n        developer4.setSalary(5000);\r\n        developer4.setGrades(\"Middle\");\r\n        developer4.writeCode();\r\n        developer4. print();\r\n\r\nManager manager1 = new Manager ();\r\n    manager1.setFio(\"Bochkin Sergey Ivanovich\");\r\n    manager1.setAge(40);\r\n    manager1.setSalary(5000);\r\n    manager1.setHasStocks(true);\r\n    manager1.writeProcedures();\r\n    manager1. print();\r\n\r\nManager manager2 = new Manager ();\r\n        manager2.setFio(\"Cooronbaev Altynbek\");\r\n        manager2.setAge(55);\r\n        manager2.setSalary(5000);\r\n        manager2.setHasStocks(true);\r\n        manager2.writeProcedures();\r\n        manager2. print();\r\n\r\n\r\nCEO ceo = new CEO ();\r\n    ceo.setFio(\"Cooronbaev Altynbek\");\r\n    ceo.setAge(55);\r\n    ceo.setSalary(10000);\r\n    ceo.setHasStocks(true);\r\n    ceo.goPublic();\r\n    ceo. print();\r\n\r\n\r\n}\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Mainemployee.java b/src/Mainemployee.java
+--- a/src/Mainemployee.java	(revision 7642e03f63b761881bc6f972a9c11ab51f656379)
++++ b/src/Mainemployee.java	(date 1612171101700)
+@@ -1,7 +1,6 @@
+ public class Mainemployee{
+     public static void main(String[]args){
+-
+-
++ 
+  Specialist specialist1 = new Specialist();
+         specialist1.setFio("Kan Alexsey");
+         specialist1.setAge(35);
+@@ -78,6 +77,23 @@
+     ceo. print();
+ 
+ 
++    Employee[] employees = new Employee[10];
++
++    employees[0] = specialist1;
++    employees[1] = specialist2;
++    employees[2] = specialist3;
++    employees[3] = developer1;
++    employees[4] = developer2;
++    employees[5] = developer3;
++    employees[6] = developer4;
++    employees[7] = manager1;
++    employees[8] = manager2;
++    employees[9] = ceo;
++
++   for (Employee i : employees){
++       i.goToVacation();
++   }
++
+ }
+ 
+ }
+Index: src/Specialist.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>public class Specialist extends Employee {\r\n\r\n   int levels;\r\n\r\n   public Specialist(String fio, int age, int salary, int levels) {\r\n      super(fio, age, salary);\r\n      this.levels = levels;\r\n   }\r\n\r\n   public Specialist(int levels) {\r\n      this.levels = levels;\r\n   }\r\n\r\n   public Specialist(){\r\n\r\n   }\r\n\r\n   public int getLevels() {\r\n      return levels;\r\n   }\r\n\r\n   public void setLevels(int levels) {\r\n      this.levels = levels;\r\n   }\r\n\r\n   public void print(){\r\n      System.out.println(\"FIO:   \" + this.fio + \".\"\r\n              + \"Age: \" + this.age + \".\"\r\n              + \"Salary: \" + this.salary\r\n              + \"Level is:   \" + this.levels + \".\");\r\n   }\r\n\r\n   public void  workWithClients() {\r\n      System.out.println(\"What can i help you\");\r\n   }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Specialist.java b/src/Specialist.java
+--- a/src/Specialist.java	(revision 7642e03f63b761881bc6f972a9c11ab51f656379)
++++ b/src/Specialist.java	(date 1612171039062)
+@@ -11,7 +11,7 @@
+       this.levels = levels;
+    }
+ 
+-   public Specialist(){
++   public Specialist() {
+ 
+    }
+ 
+@@ -23,15 +23,19 @@
+       this.levels = levels;
+    }
+ 
+-   public void print(){
++   public void print() {
+       System.out.println("FIO:   " + this.fio + "."
+               + "Age: " + this.age + "."
+               + "Salary: " + this.salary
+               + "Level is:   " + this.levels + ".");
+    }
+ 
+-   public void  workWithClients() {
++   public void workWithClients() {
+       System.out.println("What can i help you");
+    }
+ 
++
++   public void goToVacation() {
++      System.out.println("I am going to lake!");
++   }
+ }
+Index: src/Developer.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>public class Developer extends Employee{\r\n    String grades;\r\n\r\n\r\n    public Developer(String fio, int age, int salary, String grades) {\r\n        super(fio, age, salary);\r\n        this.grades = grades;\r\n    }\r\n\r\n    public Developer(String grades) {\r\n        this.grades = grades;\r\n    }\r\n\r\n    public Developer(){\r\n\r\n    }\r\n\r\n\r\n    public String getGrades() {\r\n        return grades;\r\n    }\r\n\r\n    public void setGrades(String grades) {\r\n        this.grades = grades;\r\n    }\r\n\r\n    public void print(){\r\n        System.out.println(\"FIO:   \" + this.fio + \".\"\r\n                + \"Age: \" + this.age + \".\"\r\n                + \"Salary: \" + this.salary\r\n                + \"Grades is:   \" + this.grades + \".\");\r\n    }\r\n\r\n    public void  writeCode() {\r\n        System.out.println(\"I am working\");\r\n    }\r\n\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Developer.java b/src/Developer.java
+--- a/src/Developer.java	(revision 7642e03f63b761881bc6f972a9c11ab51f656379)
++++ b/src/Developer.java	(date 1612168252406)
+@@ -35,5 +35,7 @@
+         System.out.println("I am working");
+     }
+ 
+-
++    public void goToVacation() {
++        System.out.println("I am going to bootcamp!");
++    }
+ }
+Index: src/Manager.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>public class Manager extends Employee {\r\n    boolean hasStocks;\r\n\r\n    public Manager (){\r\n\r\n    }\r\n\r\n    public Manager(String fio, int age, int salary, boolean hasStocks) {\r\n        super(fio, age, salary);\r\n        this.hasStocks = hasStocks;\r\n    }\r\n\r\n    public Manager(boolean hasStocks) {\r\n        this.hasStocks = hasStocks;\r\n    }\r\n\r\n    public boolean isHasStocks() {\r\n        return hasStocks;\r\n    }\r\n\r\n    public void setHasStocks(boolean hasStocks) {\r\n        this.hasStocks = hasStocks;\r\n    }\r\n    public void print(){\r\n        System.out.println(\"FIO:   \" + this.fio + \".\"\r\n                + \"Age: \" + this.age + \".\"\r\n                + \"Salary: \" + this.salary + \".\"\r\n                + \"Stok is:   \" + this.hasStocks + \".\");\r\n    }\r\n\r\n    public void  writeProcedures() {\r\n        System.out.println(\"Writing procedure\");\r\n    }\r\n}\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Manager.java b/src/Manager.java
+--- a/src/Manager.java	(revision 7642e03f63b761881bc6f972a9c11ab51f656379)
++++ b/src/Manager.java	(date 1612171065404)
+@@ -1,7 +1,7 @@
+ public class Manager extends Employee {
+     boolean hasStocks;
+ 
+-    public Manager (){
++    public Manager() {
+ 
+     }
+ 
+@@ -21,15 +21,20 @@
+     public void setHasStocks(boolean hasStocks) {
+         this.hasStocks = hasStocks;
+     }
+-    public void print(){
++
++    public void print() {
+         System.out.println("FIO:   " + this.fio + "."
+                 + "Age: " + this.age + "."
+                 + "Salary: " + this.salary + "."
+                 + "Stok is:   " + this.hasStocks + ".");
+     }
+ 
+-    public void  writeProcedures() {
++    public void writeProcedures() {
+         System.out.println("Writing procedure");
+     }
+-}
+-
++
++
++    public void goToVacation() {
++        System.out.println("I am going to Egipt!");
++    }
++}
+\ No newline at end of file
+Index: src/CEO.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>public class CEO extends Manager{\r\n    boolean hasCompanyCar;\r\n\r\n    public CEO (){\r\n\r\n    }\r\n\r\n\r\n    public CEO(String fio, int age, int salary, boolean hasStocks, boolean hasCompanyCar) {\r\n        super(fio, age, salary, hasStocks);\r\n        this.hasCompanyCar = hasCompanyCar;\r\n    }\r\n\r\n\r\n    public boolean isHasCompanyCar() {\r\n        return hasCompanyCar;\r\n    }\r\n\r\n    public void setHasCompanyCar(boolean hasCompanyCar) {\r\n        this.hasCompanyCar = hasCompanyCar;\r\n    }\r\n\r\n    public void goPublic(){\r\n        System.out.println( \"Do not disturb. CEO working on IPO !!!\");\r\n    }\r\n    public void print(){\r\n        System.out.println(\"FIO:   \" + this.fio + \".\"\r\n                + \"Age: \" + this.age + \".\"\r\n                + \"Salary: \" + this.salary\r\n                + \"Stok is:   \" + this.hasStocks + \".\"\r\n                + \"Has company car: \" +this.hasCompanyCar + \".\" );\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/CEO.java b/src/CEO.java
+--- a/src/CEO.java	(revision 7642e03f63b761881bc6f972a9c11ab51f656379)
++++ b/src/CEO.java	(date 1612168252412)
+@@ -30,5 +30,7 @@
+                 + "Stok is:   " + this.hasStocks + "."
+                 + "Has company car: " +this.hasCompanyCar + "." );
+     }
+-
+-}
++    public void goToVacation() {
++        System.out.println("I am going to HavaiI!");
++    }
++    }
+Index: src/Employee.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import java.net.SocketTimeoutException;\r\n\r\npublic class Employee {\r\n\r\n    String fio;\r\n    int age;\r\n    int salary;\r\n\r\n    public Employee(String fio, int age, int salary) {\r\n        this.fio = fio;\r\n        this.age = age;\r\n        this.salary = salary;\r\n    }\r\n\r\n    public Employee(){\r\n\r\n    }\r\n\r\n    public String getFio() {\r\n        return fio;\r\n    }\r\n\r\n    public void setFio(String fio) {\r\n        this.fio = fio;\r\n    }\r\n\r\n    public int getAge() {\r\n        return age;\r\n    }\r\n\r\n    public void setAge(int age) {\r\n        this.age = age;\r\n    }\r\n\r\n    public int getSalary() {\r\n        return salary;\r\n    }\r\n\r\n    public void setSalary(int salary) {\r\n        this.salary = salary;\r\n    }\r\n\r\n    public void print(){\r\n        System.out.println(\"FIO:   \" + this.fio + \".\"\r\n                + \"Age: \" + this.age + \".\"\r\n                + \"Salary: \" + this.salary + \".\" );\r\n    }\r\n\r\n}\r\n\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Employee.java b/src/Employee.java
+--- a/src/Employee.java	(revision 7642e03f63b761881bc6f972a9c11ab51f656379)
++++ b/src/Employee.java	(date 1612171000969)
+@@ -1,7 +1,9 @@
+ import java.net.SocketTimeoutException;
++import java.sql.SQLOutput;
+ 
+ public class Employee {
+ 
++
+     String fio;
+     int age;
+     int salary;
+@@ -46,6 +48,11 @@
+                 + "Salary: " + this.salary + "." );
+     }
+ 
++   public void goToVacation(){
++       System.out.println( "I am going to vacation");
++
++    }
++
+ }
+ 
+ 
